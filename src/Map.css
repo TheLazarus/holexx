@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400&display=swap");
+.app__map {
+  position: relative;
+  opacity: 0.2;
+  transition: all 0.5s ease;
+}
+.app__map h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  z-index: 100;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  letter-spacing: 5px;
+  transition: all 0.7s ease;
+}
+.app__map:hover {
+  opacity: 1;
+}
+.app__map:hover h1 {
+  top: 0;
+  letter-spacing: 15px;
+}
