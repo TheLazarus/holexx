@@ -2,6 +2,7 @@ import React from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
 import "../css/Map.css";
 
+
 function Map() {
   const [viewport, setViewport] = React.useState({
     latitude: 30.91011,
