@@ -1,6 +1,6 @@
 import React from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
-import "./Map.css";
+import "../css/Map.css";
 
 function Map() {
   const [viewport, setViewport] = React.useState({
