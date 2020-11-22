@@ -42,8 +42,8 @@ function Map(props) {
           {potholeMarkers.map((marker) => (
             <Marker
               key={marker.id}
-              latitude={marker.latitude}
-              longitude={marker.longitude}
+              latitude={marker.data().latitude}
+              longitude={marker.data().longitude}
             >
               <img src={Pothole} height="20px" width="20px" alt="Pothole" />
             </Marker>
