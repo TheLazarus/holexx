@@ -1,9 +1,11 @@
 import React from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
+
 import "../css/Map.css";
 
 
 function Map() {
+ 
   const [viewport, setViewport] = React.useState({
     latitude: 30.91011,
     longitude: 77.096687,
@@ -11,6 +13,8 @@ function Map() {
     height: "100vh",
     zoom: 8,
   });
+
+ 
   return (
     <div className="app__map">
       <h1>MAP</h1>
