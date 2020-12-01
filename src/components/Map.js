@@ -10,7 +10,7 @@ function Map(props) {
   const [viewport, setViewport] = React.useState({
     latitude: 30.91011,
     longitude: 77.096687,
-    width: "50vw",
+    width: "100vw",
     height: "100vh",
     zoom: 8,
   });
@@ -46,6 +46,12 @@ function Map(props) {
               longitude={marker.longitude}
             >
               <img src={Pothole} height="20px" width="20px" alt="Pothole" />
+              <div className="pothole__info">
+                {<h2>{`Country - ${marker.country}`}</h2>}
+                {<h2>{`City - ${marker.city}`}</h2>}
+                {<h2>{`State - ${marker.state}`}</h2>}
+                {<h2>{`Pluscode- ${marker.pluscode}`}</h2>}
+              </div>
             </Marker>
           ))}
         </ReactMapGL>

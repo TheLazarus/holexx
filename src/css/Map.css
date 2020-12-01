@@ -22,3 +22,30 @@
   top: 0;
   letter-spacing: 15px;
 }
+.app__map img {
+  transition: all 0.5s;
+}
+.app__map img:hover {
+  transform: scale(1.5);
+}
+.app__map img:hover + div {
+  opacity: 1;
+}
+.pothole__info {
+  margin-top: 10px;
+  background-color: black;
+  border-radius: 10px;
+  opacity: 0;
+  padding: 10px;
+  transition: all 1s;
+  font-family: "Lato", sans-serif;
+  font-weight: lighter;
+  font-size: 10px;
+}
+.pothole__info h2 {
+  color: whitesmoke;
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  letter-spacing: 1px;
+}

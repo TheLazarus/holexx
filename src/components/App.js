@@ -1,7 +1,6 @@
 import React from "react";
 import "../css/App.css";
 import Map from "./Map";
-import PotholeInfo from "./PotholeInfo";
 import db from "./firebase";
 
 function getMarkers() {
@@ -12,6 +11,10 @@ function getMarkers() {
         id: pothole.id,
         latitude: pothole.data().latitude,
         longitude: pothole.data().longitude,
+        city: pothole.data().city,
+        country: pothole.data().country,
+        state: pothole.data().state,
+        pluscode: pothole.data().pluscode,
       });
     });
   });
@@ -28,10 +31,6 @@ function App() {
     <div className="App">
       <div className="app__main">
         <Map potholeMarkers={potholeMarkers} />
-        <div className="app__potinfo">
-          <h1>POTHOLE INFO</h1>
-          <PotholeInfo potholeMarkers={potholeMarkers} />
-        </div>
       </div>
     </div>
   );
