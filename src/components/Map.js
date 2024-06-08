@@ -5,7 +5,6 @@ import Pothole from "../images/pothole.svg";
 import "../css/Map.css";
 
 function Map(props) {
-  console.log(props);
   let potholeMarkers = props.potholeMarkers;
   const [viewport, setViewport] = React.useState({
     latitude: 30.91011,

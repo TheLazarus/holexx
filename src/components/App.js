@@ -2,29 +2,38 @@ import React from "react";
 import "../css/App.css";
 import Map from "./Map";
 import db from "./firebase";
-
-function getMarkers() {
-  let potholeList = [];
-  db.collection("potholes").onSnapshot((potholes) => {
-    potholes.forEach((pothole) => {
-      potholeList.push({
-        id: pothole.id,
-        latitude: pothole.data().latitude,
-        longitude: pothole.data().longitude,
-        city: pothole.data().city,
-        country: pothole.data().country,
-        state: pothole.data().state,
-        pluscode: pothole.data().pluscode,
-      });
-    });
-  });
-  return potholeList;
-}
+import { collection, getDocs } from "firebase/firestore";
 
 function App() {
   const [potholeMarkers, setPotholeMarkers] = React.useState([]);
+
   React.useEffect(() => {
-    setPotholeMarkers(getMarkers());
+    async function getMarkersData() {
+      let markers = [];
+      const querySnapshot = await getDocs(collection(db, "potholes"));
+      querySnapshot.forEach((doc) => {
+        const { id } = doc || {};
+        const { latitude, longitude, city, country, state, pluscode } =
+          doc.data() || {};
+        markers.push({
+          id,
+          latitude,
+          longitude,
+          city,
+          country,
+          state,
+          pluscode,
+        });
+      });
+      return markers;
+    }
+
+    async function getMarkers() {
+      const markers = await getMarkersData();
+      setPotholeMarkers(markers);
+    }
+
+    getMarkers();
   }, []);
 
   return (

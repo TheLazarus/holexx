@@ -6,14 +6,14 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.0",
     "@testing-library/user-event": "^12.2.2",
-    "firebase": "^8.1.1",
+    "firebase": "^10.12.2",
     "firebase-tools": "^8.16.2",
     "mapbox-gl": "^1.12.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^16.0.1",
+    "react-dom": "^16.0.1",
     "react-google-maps": "^9.4.5",
     "react-map-gl": "^5.2.10",
-    "react-scripts": "4.0.0",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
