@@ -3,6 +3,7 @@ import ReactMapGL, { Marker } from "react-map-gl";
 import Pothole from "../images/pothole.svg";
 
 import "../css/Map.css";
+import { mapboxToken } from "./constants";
 
 function Map(props) {
   let potholeMarkers = props.potholeMarkers;
@@ -20,7 +21,7 @@ function Map(props) {
         <h1>MAP</h1>
         <ReactMapGL
           {...viewport}
-          mapboxApiAccessToken="pk.eyJ1IjoibGF6enp6emFydXMiLCJhIjoiY2tob2YyajlwMDAzcDJyb3M1ajJmYWd3bSJ9.9Y3tZjiKoMD2slDsdLRi_Q"
+          mapboxApiAccessToken={mapboxToken}
           onViewportChange={(viewport) => {
             setViewport(viewport);
           }}
@@ -33,7 +34,7 @@ function Map(props) {
         <h1>MAP</h1>
         <ReactMapGL
           {...viewport}
-          mapboxApiAccessToken="pk.eyJ1IjoibGF6enp6emFydXMiLCJhIjoiY2tob2YyajlwMDAzcDJyb3M1ajJmYWd3bSJ9.9Y3tZjiKoMD2slDsdLRi_Q"
+          mapboxApiAccessToken={mapboxToken}
           onViewportChange={(viewport) => {
             setViewport(viewport);
           }}
